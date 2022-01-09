@@ -1,9 +1,9 @@
 import Image from "next/image";
-const Index = () => {
+const Test = () => {
   return (
     <section>
-      <div className=" relative lg:h-screen overflow-hidden grid lg:grid-cols-2">
-        <div className="lg:self-center lg:px-12">
+      <div className=" relative h-screen overflow-hidden grid grid-cols-2">
+        <div className="self-center">
           <svg
             className=" w-28 my-8 ml-4"
             fill="none"
@@ -46,7 +46,7 @@ const Index = () => {
           </div>
         </div>
         {/* images end */}
-        <div className="lg:p-16">
+        <div className="">
           <div className=" px-4 pt-8 space-y-4">
             <p className="text-4xl font-bold">
               Explore the best camps on Earth.
@@ -205,4 +205,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Test;
