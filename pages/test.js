@@ -1,67 +1,70 @@
-import { XIcon, MenuIcon } from "@heroicons/react/solid";
+import Image from "next/image";
 import Logo from "../components/Logo";
-const AddNewCampground = () => {
+import { CheckCircleIcon } from "@heroicons/react/solid";
+import AirbnbLogo from "@/components/AirbnbLogo";
+import BookingLogo from "@/components/BookingLogo";
+import PlumGuideLogo from "@/components/PlumGuideLogo";
+const Test = () => {
   return (
-    <>
-      <div className="flex items-center justify-center h-12 px-4 text-sm text-white bg-gray-900 ">
+    <div className="grid grid-rows-[auto_auto_1fr] min-h-screen  lg:h-screen  lg:grid-cols-2 lg:grid-rows-[auto_1fr] ">
+      <div className="px-6 py-10">
+        <Logo />
+      </div>
+      <div className="relative aspect-h-1 aspect-w-1 md:aspect-h-9 md:aspect-w-16 lg:row-span-2 ">
+        <div className="hidden lg:inline-block">
+          <Image
+            layout="fill"
+            className="absolute object-cover w-full h-full "
+            alt=""
+            src="/assets/hero.jpg"
+            width="661"
+            height="900"
+          />
+        </div>
+        <div className="lg:hidden">
+          <Image
+            layout="fill"
+            className="absolute object-cover w-full h-full "
+            alt=""
+            src="/assets/hero-2.jpg"
+            width="768"
+            height="375"
+          />
+        </div>
+      </div>
+      <div className="px-6 pt-12 space-y-6 lg:self-center">
+        <p className="text-5xl">Explore the best camps on Earth.</p>
         <p>
-          This project was made by{" "}
-          <span className="text-teal-500 underline">Colt Steele</span> and
-          designed by <span className="text-teal-500 underline">Coldewell</span>
+          Yelpcamp is a cruated list of the best camping spots on Earth.
+          Unfiltered unbaised rewievs
         </p>
-        <XIcon className="w-4 h-4 ml-4" />
-      </div>
-      <div className="max-w-4xl px-3 mx-auto space-y-4">
-        <div className="flex justify-between py-6">
-          <div className="flex items-center">
-            <Logo />
-            <div className="hidden ml-4 lg:inline-block">Home</div>
-          </div>
-          <div className="items-center hidden lg:flex ">
-            <div>JhonDoe</div>
-            <div className="ml-4">Logout</div>
-          </div>
-          <div className="p-1 bg-gray-100 rounded lg:hidden">
-            <MenuIcon className="w-5 h-5" />
-          </div>
+        <div className="flex items-center">
+          <CheckCircleIcon className="text-green-700 w-7 h-7" />
+          <p className="ml-4">Add your own camp suhherstions</p>
         </div>
-        <div className="max-w-xl px-3 mx-auto space-y-4">
-          <p className="text-4xl font-semibold">Add New Campground</p>
+        <div className="flex items-center">
+          <CheckCircleIcon className="text-green-700 w-7 h-7" />
+          <p className="ml-4">Leave rewievs and experiences</p>
+        </div>
+        <div className="flex items-center">
+          <CheckCircleIcon className="text-green-700 w-7 h-7" />
+          <p className="ml-4">See locations for all camps</p>
+        </div>
 
-          <p>Campground Name</p>
-          <input
-            className="w-full h-10 pl-4 text-sm rounded"
-            placeholder="Seven Sisters Waterfall"
-            type="text"
-          />
-          <p>Price</p>
-          <input
-            className="w-full h-10 pl-4 text-sm rounded"
-            placeholder="$ 149"
-            type="text"
-          />
-          <p>Image</p>
-          <input
-            className="w-full h-10 pl-4 text-sm rounded"
-            placeholder="www.thepinoytraveller.com/2018/01/mt-ulap-diy-dayhike.html"
-            type="text"
-          />
-          <p>Description</p>
-          <textarea
-            className="w-full h-56 p-4 text-sm rounded "
-            placeholder="The Seven Sisters is the 39th tallest waterfall in Norway. The 410-metre tall waterfall consist of seven separate streams. and the tallest of the seven has a free fall that mesasures 250 metres. The waterfall is located along the Geirangerflorden in Stranda Municipality in More og Romsdal county. Norway  "
-            type="text"
-          />
-          <button className="w-full px-4 py-4 text-white bg-gray-900 rounded">
-            Add Campground
-          </button>
+        <div className="px-4 py-3 text-white bg-gray-900 rounded w-max">
+          View Campgrounds
         </div>
-        <div className="py-8">
-          <Logo />
+        <div>
+          <p>Partnered with:</p>
+          <div className="flex items-center justify-center">
+            <AirbnbLogo />
+            <BookingLogo />
+            <PlumGuideLogo />
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default AddNewCampground;
+export default Test;
