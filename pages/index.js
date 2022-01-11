@@ -8,11 +8,7 @@ import Logo from "@/components/Logo";
 import { CheckCircleIcon } from "@heroicons/react/solid";
 const Index = () => {
   return (
-    <div
-      className=" bg-orange-50 grid  grid-rows-[auto_auto_1fr] grid-cols-1 min-h-screen
-lg:grid-cols-[1fr_1fr] lg:grid-rows-[auto_1fr]
-"
-    >
+    <div className=" bg-orange-50 grid  grid-rows-[auto_auto_1fr] grid-cols-1 min-h-screen lg:grid-cols-[1fr_1fr] lg:grid-rows-[auto_1fr]">
       <div className="p-6">
         <Logo />
       </div>
