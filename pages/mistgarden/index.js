@@ -4,7 +4,7 @@ import { imageConfigDefault } from "next/dist/server/image-config";
 
 const Index = () => {
   return (
-    <div className="container mx-auto">
+    <div className="max-w-5xl mx-auto">
       {/* nav */}
       <section className="flex items-center justify-between p-4">
         <div className="flex items-center">
@@ -34,14 +34,14 @@ const Index = () => {
       {/* nav END */}
       <section className="grid p-4 space-y-6 text-center lg:text-left lg:grid-cols-2">
         <div className="space-y-6 place-self-center">
-          <p className="font-serif text-[57px] text-[#343D33]">
+          <p className="font-serif text-6xl text-[#343D33]">
             A Beautiful Adventure Awaits
           </p>
           <p className="text-[25px] text-[#414840] ">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam,
             impedit. Consequatur!
           </p>
-          <div className="flex items-center justify-center space-x-4">
+          <div className="flex items-center justify-center space-x-4 lg:justify-start">
             <div className="w-full md:w-max px-5 py-3 bg-[#475F45] text-white text-[18px] border border-[#475F45]">
               BUY TICKETS
             </div>
@@ -62,29 +62,24 @@ const Index = () => {
       </section>
       {/* HERO END */}
       {/* DISCOVER START */}
-      <section className="bg-[#343D33] p-4 md:p-20 gap-6 grid grid-rows-[auto_auto_1fr] lg:grid-rows-[auto_1fr] lg:grid-cols-[1fr_1fr] ">
-        <div className="relative aspect-h-9 aspect-w-16 ">
+      <section className="bg-[#343D33] lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-4 p-12">
+        <Image
+          alt=""
+          src="https://dummyimage.com/534x354"
+          width="534"
+          height="354"
+        />
+
+        <div className="col-span-2">
           <Image
-            layout="fill"
-            className="absolute object-cover"
-            alt=""
-            src="https://dummyimage.com/534x354"
-            width="534"
-            height="354"
-          />
-        </div>
-        <div className="relative aspect-h-9 aspect-w-16 lg:col-span-2 ">
-          <Image
-            layout="fill"
-            className="absolute object-cover"
             alt=""
             src="https://dummyimage.com/1040x409"
             width="1040"
             height="409"
           />
         </div>
-        <div className="space-y-6 text-center lg:p-12 md:text-left lg:row-start-1 lg:col-start-2">
-          <p className="text-[45px] font-serif text-white ">
+        <div className="col-start-2 row-start-1 space-y-4 ">
+          <p className="font-serif text-4xl text-white ">
             Discover yourself with nature
           </p>
           <p className="text-[20px] text-white ">
